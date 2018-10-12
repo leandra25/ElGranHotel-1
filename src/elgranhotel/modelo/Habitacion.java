@@ -7,6 +7,8 @@ package elgranhotel.modelo;
 
 
 
+
+
 /**
  *
  * @author CHIDORY
@@ -14,21 +16,29 @@ package elgranhotel.modelo;
 public class Habitacion {
     private int id = -1;
     private Huesped huesped;
-    private TipoHabitacion tipo ;
-    private int contador;
+    private TipoHabitacion thabitacion;
     private boolean estado;
 
-    public Habitacion(int id, Huesped huesped, TipoHabitacion tipo, boolean estado) {
+    public Habitacion(int id, Huesped huesped, TipoHabitacion thabitacion, boolean estado) {
         this.id = id;
         this.huesped = huesped;
-        this.tipo = tipo;
+        this.thabitacion = thabitacion;
         this.estado = estado;
     }
 
-    public Habitacion(Huesped huesped, TipoHabitacion tipo, boolean estado) {
+    public Habitacion(Huesped huesped, TipoHabitacion thabitacion, boolean estado) {
         this.huesped = huesped;
-        this.tipo = tipo;
+        this.thabitacion = thabitacion;
         this.estado = estado;
+    }
+
+    
+
+    public Habitacion() {
+    }
+    
+    public double calcularMonto(int cantDias){
+        return thabitacion.getPrecioNoche() * cantDias;
     }
 
     public int getId() {
@@ -47,20 +57,12 @@ public class Habitacion {
         this.huesped = huesped;
     }
 
-    public TipoHabitacion getTipo() {
-        return tipo;
+    public TipoHabitacion getThabitacion() {
+        return thabitacion;
     }
 
-    public void setTipo(TipoHabitacion tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getContador() {
-        return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
+    public void setThabitacion(TipoHabitacion thabitacion) {
+        this.thabitacion = thabitacion;
     }
 
     public boolean isEstado() {
@@ -71,12 +73,9 @@ public class Habitacion {
         this.estado = estado;
     }
 
-  
-
-   
+    
+    
 
    
     
-    
-  
 }

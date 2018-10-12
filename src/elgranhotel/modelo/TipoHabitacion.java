@@ -11,35 +11,42 @@ package elgranhotel.modelo;
  */
 public class TipoHabitacion {
     private int id = -1;
-    private String tipo;
+    private String tipo; //(Estándar simple, doble, Triple, o Suite Lujo) 
     private int codigo;
     private int cantPersonas;
     private int cantCamas;
-    private String tipoCamas;
+    private String tipoCamas; //(Simples, Queen, King Size)
     private double precioNoche;
 
-    public TipoHabitacion(int id, String tipo, int codigo, int cantPersonas, int cantCamas, String tipoCamas, double precioNoche) {
+    public TipoHabitacion(int id, String tipo, int codigo, int cantPersonas,
+                                            int cantCamas, String tipoCamas, double precioNoche) {
+        
         this.id = id;
-        this.tipo = tipo;
+        this.tipo = tipo; //(Estándar simple, doble, Triple, o Suite Lujo) 
         this.codigo = codigo;
         this.cantPersonas = cantPersonas;
         this.cantCamas = cantCamas;
-        this.tipoCamas = tipoCamas;
+        this.tipoCamas = tipoCamas; //(Simples, Queen, King Size)
         this.precioNoche = precioNoche;
     }
 
-    public TipoHabitacion(String tipo, int codigo, int cantPersonas, int cantCamas, String tipoCamas, double precioNoche) {
-        this.tipo = tipo;
+    public TipoHabitacion(String tipo, int codigo, int cantPersonas, int cantCamas, 
+                                                   String tipoCamas, double precioNoche) {
+        
+        this.tipo = tipo; //(Estándar simple, doble, Triple, o Suite Lujo) 
         this.codigo = codigo;
         this.cantPersonas = cantPersonas;
         this.cantCamas = cantCamas;
-        this.tipoCamas = tipoCamas;
+        this.tipoCamas = tipoCamas; //(Simples, Queen, King Size)
         this.precioNoche = precioNoche;
     }
 
+    
     public TipoHabitacion(String tipo) {
         this.tipo = tipo;
     }
+    
+    
 
     public int getId() {
         return id;

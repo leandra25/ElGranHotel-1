@@ -17,6 +17,7 @@ public class Huesped {
     private String correo;
 
     public Huesped(int id, String nombre, int dni, String domicilio, String correo) {
+        this.id = id;
         this.nombre = nombre;
         this.dni = dni;
         this.domicilio = domicilio;
@@ -28,6 +29,11 @@ public class Huesped {
         this.dni = dni;
         this.domicilio = domicilio;
     }
+
+    public Huesped() {
+    }
+    
+    
     
     
 
