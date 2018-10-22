@@ -15,26 +15,16 @@ public class Huesped {
     private int dni;
     private String domicilio;
     private String correo;
+    private int celular;
 
-    public Huesped(int id, String nombre, int dni, String domicilio, String correo) {
+    public Huesped(int id, String nombre, int dni, String domicilio, String correo, int celular) {
         this.id = id;
         this.nombre = nombre;
         this.dni = dni;
         this.domicilio = domicilio;
         this.correo = correo;
+        this.celular = celular;
     }
-
-    public Huesped(String nombre, int dni, String domicilio) {
-        this.nombre = nombre;
-        this.dni = dni;
-        this.domicilio = domicilio;
-    }
-
-    public Huesped() {
-    }
-    
-    
-    
     
 
     public int getId() {
@@ -77,7 +67,13 @@ public class Huesped {
         this.correo = correo;
     }
     
+    public int getCelular(){
+    return celular;
     
+    }
     
+    public void setCelular(int celular){
+       this.celular = celular;
+    }
     
 }
